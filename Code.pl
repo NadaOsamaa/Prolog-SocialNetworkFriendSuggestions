@@ -30,7 +30,7 @@ friend(eman, laila).
 
 is_friend(A, B):-  friend(A, B); friend(B, A).
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Q2
 
 friendList(Person, InvertedL) :-
@@ -46,7 +46,7 @@ is_friend(Person, Friend),
 friendListInvert(Person, [Friend|Temp], L).
 friendListInvert(_, L, L).
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Q3
 
 % a predicate to check if an element is a member of a list
@@ -66,7 +66,7 @@ NewVisited = [Friend|Visited],
 friendListCount(Person, NewVisited, NewTemp, Count),!.    
 friendListCount(_, _, Count, Count).
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Q4
 
 peopleYouMayKnow(Person, Friend_of_Friend):-
@@ -74,7 +74,7 @@ is_friend(Person, Friend),
 is_friend(Friend, Friend_of_Friend),
 \+ Friend_of_Friend = Person.
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Q5
 %to concat two lists
 concat([],L,L).
@@ -158,7 +158,7 @@ peopleYouMayKnow(Person, N, SuggestedF):-
     mutual(Person_friends,N, AllFriends2, SuggestedF),
     !.
     
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Q6
 
 % This is a predicate to invert a list
@@ -190,7 +190,7 @@ peopleYouMayKnowList(Person, InvertedL) :-
     invertlist(L, InvertedL),!.
 
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 % Bonus 
 
 peopleYouMayKnow_indirect(Person, Third_Friend):-
