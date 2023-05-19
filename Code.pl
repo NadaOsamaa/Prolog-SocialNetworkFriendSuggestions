@@ -26,11 +26,12 @@ friend(zainab, rokaya).
 friend(zainab, eman).
 friend(eman, laila).
 
+% _____________________________________________________________________________
 % Q1
 
 is_friend(A, B):-  friend(A, B); friend(B, A).
 
-% ______________________________________________________________________________
+% _______________________________________________________________________________
 % Q2
 
 friendList(Person, InvertedL) :-
@@ -46,7 +47,7 @@ is_friend(Person, Friend),
 friendListInvert(Person, [Friend|Temp], L).
 friendListInvert(_, L, L).
 
-% ______________________________________________________________________________
+% _______________________________________________________________________________
 % Q3
 
 % a predicate to check if an element is a member of a list
@@ -66,7 +67,7 @@ NewVisited = [Friend|Visited],
 friendListCount(Person, NewVisited, NewTemp, Count),!.    
 friendListCount(_, _, Count, Count).
 
-% ______________________________________________________________________________
+% _______________________________________________________________________________
 % Q4
 
 peopleYouMayKnow(Person, Friend_of_Friend):-
@@ -191,7 +192,7 @@ peopleYouMayKnowList(Person, InvertedL) :-
 
 
 % ______________________________________________________________________________
-% Bonus 
+% Q7 (Bonus) 
 
 peopleYouMayKnow_indirect(Person, Third_Friend):-
 is_friend(Person, Friend),
